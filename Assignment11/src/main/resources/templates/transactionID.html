@@ -1,0 +1,23 @@
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<title>Transaction</title>
+	</head>
+	<body>
+		<div>
+			<h1 th:text="|Transaction ID: ${transaction.getId()} (${transaction.getType()})|"></h1>
+		</div>
+		<div> 
+			<h3 th:inline="text">Date: [[${transaction.getDate()}]]</h3>
+		</div>
+		<div> 
+			<h3 th:inline="text">Amount: [[${transaction.getAmount()}]]</h3>
+		</div>
+		<div> 
+			<h3 th:inline="text">Description: [[${transaction.getDescription()}]]</h3>
+		</div>
+		<div>
+			<a href="/transactions">Back</a>
+		</div>
+	</body>
+
+</html>
